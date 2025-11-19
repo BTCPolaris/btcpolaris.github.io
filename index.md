@@ -11,3 +11,17 @@ title: 北极星BTC
 - 原则：长期主义、少做决定、少动手，多持有
 
 这是第一版首页，后面会慢慢补充板块和文章目录。
+
+---
+
+## 最近文章
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url | relative_url }}">
+        {{ post.date | date: "%Y-%m-%d" }} · {{ post.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
